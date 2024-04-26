@@ -9,7 +9,7 @@ virtualenv /home/ubuntu/env
 source /home/ubuntu/env/bin/activate
 
 # Install Python dependencies
-pip install -r /home/ubuntu/ANPR_VERCEL/requirements.txt
+pip3 install -r /home/ubuntu/ANPR_VERCEL/requirements.txt
 
 # Copy Gunicorn service and socket files
 sudo cp /home/ubuntu/ANPR_VERCEL/gunicorn/gunicorn.socket  /etc/systemd/system/gunicorn.socket
