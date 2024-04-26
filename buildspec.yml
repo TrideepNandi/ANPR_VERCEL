@@ -13,12 +13,6 @@ phases:
   pre_build:
     commands:
       - echo Copying scripts and configuration files...
-      - cp ANPR_VERCEL/scripts/before_install.sh /opt/codedeploy-agent/deployment-root/70617fac-0c3b-468f-8ed6-98cf71553a40/d-NP8F9S6N4/deployment-archive/scripts/
-      - cp ANPR_VERCEL/scripts/start_services.sh /opt/codedeploy-agent/deployment-root/70617fac-0c3b-468f-8ed6-98cf71553a40/d-NP8F9S6N4/deployment-archive/scripts/
-      - cp ANPR_VERCEL/scripts/app_operations.sh /opt/codedeploy-agent/deployment-root/70617fac-0c3b-468f-8ed6-98cf71553a40/d-NP8F9S6N4/deployment-archive/scripts/
-      - cp ANPR_VERCEL/gunicorn/gunicorn.service /opt/codedeploy-agent/deployment-root/70617fac-0c3b-468f-8ed6-98cf71553a40/d-NP8F9S6N4/deployment-archive/
-      - cp ANPR_VERCEL/gunicorn/gunicorn.socket /opt/codedeploy-agent/deployment-root/70617fac-0c3b-468f-8ed6-98cf71553a40/d-NP8F9S6N4/deployment-archive/
-      - cp ANPR_VERCEL/nginx/nginx.conf /opt/codedeploy-agent/deployment-root/70617fac-0c3b-468f-8ed6-98cf71553a40/d-NP8F9S6N4/deployment-archive/
 
   build:
     commands:
@@ -30,9 +24,6 @@ phases:
   post_build:
     commands:
       - echo Changing permissions for scripts and configuration files...
-      - chmod +x /opt/codedeploy-agent/deployment-root/70617fac-0c3b-468f-8ed6-98cf71553a40/d-NP8F9S6N4/deployment-archive/scripts/*.sh
-      - chmod 644 /opt/codedeploy-agent/deployment-root/70617fac-0c3b-468f-8ed6-98cf71553a40/d-NP8F9S6N4/deployment-archive/*.service
-      - chmod 644 /opt/codedeploy-agent/deployment-root/70617fac-0c3b-468f-8ed6-98cf71553a40/d-NP8F9S6N4/deployment-archive/*.socket
 
 artifacts:
   files:
