@@ -13,12 +13,12 @@ phases:
   pre_build:
     commands:
       - echo Copying scripts and configuration files...
-      - cp project/scripts/before_install.sh /opt/codedeploy-agent/deployment-root/70617fac-0c3b-468f-8ed6-98cf71553a40/d-NP8F9S6N4/deployment-archive/scripts/
-      - cp project/scripts/start_services.sh /opt/codedeploy-agent/deployment-root/70617fac-0c3b-468f-8ed6-98cf71553a40/d-NP8F9S6N4/deployment-archive/scripts/
-      - cp project/scripts/app_operations.sh /opt/codedeploy-agent/deployment-root/70617fac-0c3b-468f-8ed6-98cf71553a40/d-NP8F9S6N4/deployment-archive/scripts/
-      - cp project/gunicorn/gunicorn.service /opt/codedeploy-agent/deployment-root/70617fac-0c3b-468f-8ed6-98cf71553a40/d-NP8F9S6N4/deployment-archive/
-      - cp project/gunicorn/gunicorn.socket /opt/codedeploy-agent/deployment-root/70617fac-0c3b-468f-8ed6-98cf71553a40/d-NP8F9S6N4/deployment-archive/
-      - cp project/nginx/nginx.conf /opt/codedeploy-agent/deployment-root/70617fac-0c3b-468f-8ed6-98cf71553a40/d-NP8F9S6N4/deployment-archive/
+      - cp ANPR_VERCEL/scripts/before_install.sh /opt/codedeploy-agent/deployment-root/70617fac-0c3b-468f-8ed6-98cf71553a40/d-NP8F9S6N4/deployment-archive/scripts/
+      - cp ANPR_VERCEL/scripts/start_services.sh /opt/codedeploy-agent/deployment-root/70617fac-0c3b-468f-8ed6-98cf71553a40/d-NP8F9S6N4/deployment-archive/scripts/
+      - cp ANPR_VERCEL/scripts/app_operations.sh /opt/codedeploy-agent/deployment-root/70617fac-0c3b-468f-8ed6-98cf71553a40/d-NP8F9S6N4/deployment-archive/scripts/
+      - cp ANPR_VERCEL/gunicorn/gunicorn.service /opt/codedeploy-agent/deployment-root/70617fac-0c3b-468f-8ed6-98cf71553a40/d-NP8F9S6N4/deployment-archive/
+      - cp ANPR_VERCEL/gunicorn/gunicorn.socket /opt/codedeploy-agent/deployment-root/70617fac-0c3b-468f-8ed6-98cf71553a40/d-NP8F9S6N4/deployment-archive/
+      - cp ANPR_VERCEL/nginx/nginx.conf /opt/codedeploy-agent/deployment-root/70617fac-0c3b-468f-8ed6-98cf71553a40/d-NP8F9S6N4/deployment-archive/
 
   build:
     commands:
