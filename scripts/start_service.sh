@@ -8,7 +8,7 @@ sudo systemctl enable gunicorn.service
 sudo gpasswd -a www-data ubuntu
 
 # Start Django server
-python /home/ubuntu/ANPR_VERCEL/manage.py runserver 0.0.0.0:8000
+python3 /home/ubuntu/ANPR_VERCEL/manage.py runserver 0.0.0.0:8000
 
 # Restart Nginx
 sudo systemctl restart nginx
