@@ -1,6 +1,6 @@
 #!/usr/bin/bash 
 
-sed -i 's/\[]/\["54.144.250.113"]/' /home/ubuntu/ANPR_VERCEL/ANPR_VERCEL/settings.py
+sed -i 's/\[]/\["3.111.198.199"]/' /home/ubuntu/ANPR_VERCEL/ANPR_VERCEL/settings.py
 
 python manage.py migrate 
 python manage.py makemigrations     
