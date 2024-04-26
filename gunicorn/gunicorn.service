@@ -1,0 +1,13 @@
+[Unit]
+Description=gunicorn daemon
+Requires=gunicorn.socket
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/ANPR_VERCEL
+ExecStart=/home/ubuntu/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/ubuntu/ANPR_VERCEL/ANPR_VERCEL.sock ANPR_VERCEL.wsgi:application
+
+[Install]where
+WantedBy=multi-user.target

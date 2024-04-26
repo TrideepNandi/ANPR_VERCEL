@@ -1,0 +1,8 @@
+[Unit]
+Description=gunicorn socket
+
+[Socket]
+ListenStream=/run/ANPR_VERCEL.sock
+
+[Install]
+WantedBy=sockets.target

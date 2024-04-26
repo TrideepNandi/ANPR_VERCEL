@@ -1,0 +1,22 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/ANPR_VERCEL
+permissions:
+  - object: /home/ubuntu/ANPR_VERCEL
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu
+hooks:
+  BeforeInstall:
+    - location: scripts/install_dependencies.sh
+      timeout: 300
+      runas: ubuntu
+  AfterInstall:
+    - location: scripts/start_services.sh
+      timeout: 300
+      runas: ubuntu
+    - location: scripts/app_operations.sh
+      timeout: 300
+      runas: ubuntu

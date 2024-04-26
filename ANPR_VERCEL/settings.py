@@ -83,7 +83,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "ANPR_VERCEL.wsgi.app"
+WSGI_APPLICATION = "ANPR_VERCEL.wsgi.application"
 
 
 # Database
