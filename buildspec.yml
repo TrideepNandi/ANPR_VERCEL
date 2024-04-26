@@ -12,7 +12,6 @@ phases:
   pre_build:
     commands:
       - echo Pre-build phase...
-      - git clone https://github.com/TrideepNandi/ANPR_VERCEL.git /home/ubuntu/ANPR_VERCEL
   build:
     commands:
       - echo Build started on `date`

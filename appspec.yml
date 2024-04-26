@@ -10,6 +10,9 @@ permissions:
     group: ubuntu
 hooks:
   BeforeInstall:
+    - location: scripts/clone_repository.sh
+      timeout: 300
+      runas: ubuntu
     - location: scripts/install_dependencies.sh
       timeout: 300
       runas: ubuntu
