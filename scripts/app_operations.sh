@@ -1,12 +1,14 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-# Django operations
-# sed -i 's/\[]/\["54.144.250.113"]/' /home/ubuntu/ANPR_VERCEL/ANPR_VERCEL/settings.py
-sed -i 's/\[]/\["3.110.161.152"]/' /home/ubuntu/ANPR_VERCEL/ANPR_VERCEL/settings.py
-python3 manage.py migrate
-python3 manage.py makemigrations
-python3 manage.py collectstatic
+# Perform any additional operations specific to your application here
+# For example, you might want to run database migrations, collect static files, etc.
 
-# Restart services
-sudo service gunicorn restart
-sudo service nginx restart
+# Activate the virtual environment
+source /home/ubuntu/env/bin/activate
+
+# Run Django migrations
+python3 /home/ubuntu/ANPR_VERCEL/manage.py migrate
+python3 /home/ubuntu/ANPR_VERCEL/manage.py migrate
+
+# Collect static files
+python3 /home/ubuntu/ANPR_VERCEL/manage.py collectstatic --noinput
